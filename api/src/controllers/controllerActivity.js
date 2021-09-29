@@ -7,12 +7,10 @@ module.exports = {
         try {
         const { name, difficulty, duration, season, countries } = req.body;
         let createdActivity = await Activity.create({
-            // where: {
                 name,
                 difficulty,
                 duration,
                 season,
-            // }
         });
         const findedCountry = await Country.findOne({
             where: {

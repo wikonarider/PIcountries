@@ -43,11 +43,11 @@ module.exports = {
                 },],
             });
         // [ ] GET /countries/{idPais}:
-        if(id){
+        if(id) {
             allCountries = allCountries.find(ccod => ccod.cod.toLowerCase() === id.toLowerCase());
         };
         // [ ] GET /countries?name=
-        if(name){
+        if(name) {
             allCountries = allCountries.find(cname => cname.name[0].toLowerCase().includes(name.toLowerCase()));
         };
         res.status(200).json(allCountries);

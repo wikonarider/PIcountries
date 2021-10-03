@@ -1,11 +1,32 @@
 import './App.css';
+import { useDispatch } from 'react-redux';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Routes from './routes';
+
+import { useEffect } from 'react';
+import { getAllActivities, getAllCountries, unmountAllCountries } from './redux/actions';
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getAllCountries());
+    dispatch(getAllActivities());
+    return () => {
+        dispatch(unmountAllCountries());
+    };
+}, [ dispatch ]);
+
   return (
-    <div className="App">
-      <h1>Henry Countries</h1>
-    </div>
+
+    <Router>
+      <Routes />
+    </Router>
+
   );
 }
 
 export default App;
+
+// INSTALACIONES 
+// npm i redux redux-thunk react-redux react-router-dom axios
+// redux-devtools-extension

@@ -1,0 +1,12 @@
+.cnt {
+    height: 56px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #0ca157;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}

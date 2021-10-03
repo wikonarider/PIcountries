@@ -5,7 +5,7 @@ module.exports = {
     // [ ] POST /activity:
     createActivity: async function(req, res, next){
         try {
-        const { name, difficulty, duration, season, countries } = req.body;
+        const { name, difficulty, duration, season, country } = req.body;
         let createdActivity = await Activity.create({
                 name,
                 difficulty,
@@ -14,7 +14,7 @@ module.exports = {
         });
         const findedCountry = await Country.findOne({
             where: {
-                name: countries,
+                name: country,
             }
         });
         await createdActivity.addCountry(findedCountry);

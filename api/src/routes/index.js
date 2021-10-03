@@ -17,7 +17,7 @@ const router = Router();
 router.get('/countries', getCountries);
 router.get('/countries/:id', getCountries);
 router.get('/countries/?name=', getCountries);
-router.post('/add', createActivity);
+router.post('/activities/add', createActivity);
 // EXTRAS -----------------------------------------
 router.delete('/delete/:id', deleteActivity);
 router.get('/activities', getAllActivities);   

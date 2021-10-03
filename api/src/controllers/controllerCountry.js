@@ -42,13 +42,14 @@ module.exports = {
                     attributes: ['name', 'difficulty', 'duration', 'season'],
                 },],
             });
+            // console.log("¿CUÁNTOS PAÍSES TENGO?", allCountries.length);
         // [ ] GET /countries/{idPais}:
         if(id) {
             allCountries = allCountries.find(ccod => ccod.cod.toLowerCase() === id.toLowerCase());
         };
         // [ ] GET /countries?name=
         if(name) {
-            allCountries = allCountries.find(cname => cname.name[0].toLowerCase().includes(name.toLowerCase()));
+            allCountries = allCountries.filter(cname => cname.name.toLowerCase().includes(name.toLowerCase()));
         };
         res.status(200).json(allCountries);
         }catch(err){

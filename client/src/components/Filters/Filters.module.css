@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: auto;
+    margin-top: 10px;
+}
+
+.containers{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: auto;
+    margin: 10px 10px 10px 10px;
+}
+
+.cnt{
+    background-color:greenyellow;
+}
+
+.text{
+    color: blanchedalmond;
+}

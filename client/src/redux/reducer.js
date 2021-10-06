@@ -13,7 +13,7 @@ import {
 const initialState = {
     allCountries:[],
     countries: [],
-    country: {},
+    country: {activities: []},
     allActivities: [],
     activity: {},
 };

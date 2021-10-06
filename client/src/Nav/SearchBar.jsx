@@ -18,7 +18,7 @@ const SearchBar = () => {
     return(
         <div>
             <input onChange={({ target: {value} }) => setName(value)} value={name} type='text' placeholder='country name...'></input> 
-            <button onClick={handleOnClick}>Search</button>
+            <button onSubmit={handleOnClick}>Search</button>
         </div>
     );
 };

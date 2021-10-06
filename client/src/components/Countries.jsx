@@ -1,27 +1,23 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { useLocation } from 'react-router';
 
 import CountryCard from './CountryCard';
-import { getAllCountries, unmountAllCountries } from '../redux/actions';
+
+import Pagination from './Pagination';
 
 const Countries = () => {
-    const dispatch = useDispatch();
+    const query = new URLSearchParams(useLocation().search.slice(1));
     const { countries } = useSelector(state => state);
-
-    // useEffect(() => {
-    //     dispatch(getAllCountries());
-    //     return () => {
-    //         dispatch(unmountAllCountries());
-    //     };
-    // }, [ dispatch ]);
-
+    const from = parseInt(query.get('from')) || 0;
     return (
         <div>
+            <Pagination />
             {
                 countries &&
-                countries.map(country => <CountryCard key={country.id} country={country} />)
+                countries.slice(from, from + 9).map(country => <CountryCard key={country.id} country={country} />)
             }
-
+            <Pagination />
         </div>
     )
     // return countries.length ? Countries() : <div>Loading...</div>

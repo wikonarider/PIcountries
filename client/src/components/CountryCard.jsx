@@ -1,12 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { NavLink } from 'react-router-dom';
+import { getCountry } from '../redux/actions';
 
+import styles from './CountryCard.module.css'
 const CountryCard = ({ country }) => {
+    const dispatch = useDispatch();
 
     return (
         <div>
-            <img src={country.flag} alt={country.name} style={{ width: '200px', height: '200px' }} />
-            <Link to={`/countries/detail/:${country.id}`}> <h4>{ country.name }</h4> </Link>
+            <img src={country.flag} alt={country.name} className={styles.img} />
+            <NavLink onClick={() => {dispatch(getCountry(country.cod))}} className={styles.button} to={`/main/detail/:${country.cod}`}> <h4>{country.name}</h4> </NavLink>
             <p>{country.continent}</p>
         </div>
     );

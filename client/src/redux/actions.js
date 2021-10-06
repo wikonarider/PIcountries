@@ -23,9 +23,9 @@ export const getAllCountries = name => dispatch => {
     }
 };
 
-export const getCountry = id => dispatch => {
+export const getCountry = cod => dispatch => {
     try {
-        return axios.get(`/countries/:${id}`)
+        return axios.get(`/countries/${cod}`)
         .then(res => dispatch ({ type: GET_COUNTRY, payload: res.data }))
     }catch(err){
         console.error(err);

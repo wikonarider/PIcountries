@@ -2,7 +2,7 @@ const { Router } = require('express');
 const { getCountries } = require('../controllers/controllerCountry');
 const {     
     createActivity,
-    deleteActivity,
+    // deleteActivity,
     getAllActivities, 
 } = require('../controllers/controllerActivity');
 // Importar todos los routers;
@@ -19,7 +19,7 @@ router.get('/countries/:id', getCountries);
 router.get('/countries/?name=', getCountries);
 router.post('/activities/add', createActivity);
 // EXTRAS -----------------------------------------
-router.delete('/delete/:id', deleteActivity);
+// router.delete('/delete/:id', deleteActivity);
 router.get('/activities', getAllActivities);   
 
 

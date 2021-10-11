@@ -1,6 +1,38 @@
-body {
-    background-color:whitesmoke;
+
+
+.ctn {
+    background-image: url('./background.jpg');
+    background-position: center;
+    background-size: cover;
     display: flex;
+    position: relative;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
+    width: 1350px;
+    height: 600px;
+   
+
+}
+@keyframes button {
+    50% {
+        width: 400px;
+        height: 500px;
+    }
+    50% {
+        width: 400px;
+        height: 500px;
+    }
+}
+.btn {
+    background-color: transparent;
+    border: none;
+    font-family: 'Yaldevi', sans-serif;
+    font-size: 70px;
+    animation-duration: 3s;
+    animation-name: button;
+    animation-iteration-count: infinite;
+}
+
+.btn:hover{
+    background-color: yellowgreen;
 }

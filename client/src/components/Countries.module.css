@@ -1,0 +1,30 @@
+.cnt{
+
+    justify-content: space-evenly;
+    align-items:stretch;
+    background-color: transparent;  
+    margin-right: 15px;
+    margin-left: 15px;
+
+}
+
+
+
+.cont {
+    display: inline;
+
+}
+
+.pag{
+    
+    position:relative;
+    align-items: center;
+}
+
+.one {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-gap: 20px;
+    justify-content: space-around;
+    
+}

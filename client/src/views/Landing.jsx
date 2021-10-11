@@ -8,11 +8,13 @@ const Landing = () => {
     const handleOnClick = () => history.push('/main')
 
     return (
-        <div className={styles.cnt}>
-            <button onClick={handleOnClick}>
-                Planet earth COUNTRIES!
+        <body className={styles.wrapper}>
+        <div className={styles.ctn}>
+            <button className={styles.btn} onClick={handleOnClick}>
+                COUNTRY ACTIVITIES
             </button>
         </div>
+        </body>
     )
 };
 

@@ -25,14 +25,14 @@ module.exports = {
             let allCountries = countries.map(async c => {
                 await Country.findOrCreate({
                     where: {
-                        id: c.id,
-                        cod: c.cod,
-                        name: c.name,
-                        flag: c.flag,
+                        id: c.id || c.cca3,
+                        cod: c.cod || "",
+                        name: c.name || 'country name',
+                        flag: c.flag || 'img',
                         continent: c.continent,
-                        capital: c.capital,
-                        region: c.region,
-                        area: c.area
+                        capital: c.capital || 'sorry, at the moment it is not available',
+                        region: c.region || 'sorry, at the moment it is not available',
+                        area: c.area || 0,
                     }
                 })
             });
@@ -40,6 +40,7 @@ module.exports = {
                 include: [{
                     model: Activity,
                     attributes: ['name', 'difficulty', 'duration', 'season'],
+                    // through: { attributes : []}
                 },],
             });
             // console.log("¿CUÁNTOS PAÍSES TENGO?", allCountries.length);

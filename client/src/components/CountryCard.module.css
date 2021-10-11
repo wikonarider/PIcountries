@@ -15,10 +15,10 @@
   }
   
   .card {
-    width: 160px;
-    height: 180px;
+    width: 200px;
+    height: 100px;
     border-radius: 15px;
-    padding: 1.5rem;
+    padding: 1.6rem;
     background: white;
     position: relative;
     display: flex;
@@ -79,7 +79,7 @@
     color: blanchedalmond;
     letter-spacing: 1px;
     font-size: 10px;
-    margin-top: 8px;
+    margin-top: 0px;
   }
   .button {
     margin-left: auto;
@@ -88,14 +88,12 @@
     outline: none;
     border: none;
     border-radius: 3px;
-    background: white;
     color: black;
     font-weight: bold;
     cursor: pointer;
     transition: 0.4s ease;
   }
   .button:hover {
-    background: dodgerblue;
     color: white;
   }
 

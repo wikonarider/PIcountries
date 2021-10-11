@@ -15,15 +15,30 @@ const CreateActivity = () => {
         country: [],
     });
 
+    const [input, setInput] = useState({
+        inputCountries: []
+    }) 
+
     const handleOnChange = ({ target: { name, value } }) => setValues ({
         ...values,
         [name]:value,
     });
 
+    function handleSelect(e) {
+        setValues({
+          ...values,
+          country: [...values.country, e.target.value],
+        });
+        console.log(e.target.value)
+      }
+
+    
+
     const handleOnSubmit = e => {
         e.preventDefault();
         console.log("VALORES", values)
         dispatch(createActivity(values));
+
         setValues({
             name: '',
             difficulty: '',
@@ -31,6 +46,7 @@ const CreateActivity = () => {
             season: '',
             country: [],
         });
+        alert('Activity created!')
     };
 
     return (
@@ -57,11 +73,25 @@ const CreateActivity = () => {
                 <option value="spring">spring</option>
             </select>
             <label>Country:</label>
-            <select name='country' onChange={handleOnChange} value={values.country} required>
+            {/* <select name='country' onChange={handleOnChange} value={values.country} required>
             {
             countries.map(country => <option key={country.id} value={country.name}>{country.name}</option>)
             }
+            </select> */}
+            <div>
+            <select onChange={(e) => handleSelect(e)} value={input.inputCountries[input.inputCountries.length - 1]} className required>
+              <option value="">Select Country:</option>
+              {countries.map((e) => (<option key={e.id} value={e.name}> {e.name} </option>
+              ))}
             </select>
+            <div>
+              {[
+                values.country.map(
+                  (i) => countries.find((ob) => ob.name === i)?.name + ", "
+                ),
+              ]}
+            </div>
+          </div>
             <button>Add</button>
         </form>
     );

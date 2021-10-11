@@ -8,10 +8,17 @@ const CountryCard = ({ country }) => {
     const dispatch = useDispatch();
 
     return (
-        <div>
+        <div className={styles.wrapper}>
+            <div className={styles.card}>
             <img src={country.flag} alt={country.name} className={styles.img} />
-            <NavLink onClick={() => {dispatch(getCountry(country.cod))}} className={styles.button} to={`/main/detail/:${country.cod}`}> <h4>{country.name}</h4> </NavLink>
-            <p>{country.continent}</p>
+            <div className={styles.info}>
+                <div className={styles.info1}>
+                    <NavLink onClick={() => {dispatch(getCountry(country.cod))}} className={styles.button} to={`/main/detail/:${country.cod}`}> <h1 className={styles.h1}>{country.name}</h1> </NavLink>
+                    <p className={styles.p}>{country.cod}</p>
+                    <p className={styles.p}>{country.continent}</p>
+                </div>
+            </div>
+            </div>
         </div>
     );
 };

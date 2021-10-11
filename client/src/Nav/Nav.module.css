@@ -1,12 +1,19 @@
 .cnt {
-    height: 56px;
+    height: 100%;
     width: 100%;
     top: 0;
     left: 0;
-    background-color: #0ca157;
+    background-color: yellowgreen;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 0 20px;
     box-sizing: border-box;
+    margin-top: 2px;
+}
+
+.logo {
+    font-family: 'Yaldevi', sans-serif;
+    font-size: 70px;
+    margin: 2px 2px 2px 2px;
 }

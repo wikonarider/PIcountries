@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { createActivity } from "../../redux/actions";
 
-
 import styles from './CreateActivity.module.css';
 const CreateActivity = () => {
     const dispatch = useDispatch();
@@ -19,7 +18,7 @@ const CreateActivity = () => {
 
     const [input, setInput] = useState({
         inputCountries: []
-    }) 
+    });
 
     const handleOnChange = ({ target: { name, value } }) => setValues ({
         ...values,
@@ -31,10 +30,8 @@ const CreateActivity = () => {
           ...values,
           country: [...values.country, e.target.value],
         });
-        console.log(e.target.value)
-      }
-
-    
+        // console.log(e.target.value)
+    };
 
     const handleOnSubmit = e => {
         e.preventDefault();
@@ -71,7 +68,7 @@ const CreateActivity = () => {
             </div>
             <div className={styles.font}>
             <label>DURATION:</label>
-            <input name='duration' onChange={handleOnChange} values={values.name} placeholder="Activity duration 00:00" required/>
+            <input type="time" name='duration' onChange={handleOnChange} values={values.name} placeholder="Activity duration 00:00" required/>
             </div>
             <div className={styles.font}>
             <label>SEASON:</label>

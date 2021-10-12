@@ -15,15 +15,15 @@ const Countries = () => {
         <div className={styles.cnt}>
             <h4 className={styles.pag}><Pagination /></h4>
             <div className={styles.one}>
-            {
+            { countries.length > 0 ?
                 countries &&
                 countries.slice(from, from + 9).map(country => <CountryCard key={country.id} country={country} />)
+            : <span>Loading...</span>
             }
             </div>
             <h4><Pagination /></h4>
         </div>
     )
-    // return countries.length ? Countries() : <div>Loading...</div>
 };
 
 export default Countries;

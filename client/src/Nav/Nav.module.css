@@ -1,5 +1,5 @@
 .cnt {
-    height: 100%;
+    height: 120px;
     width: 100%;
     top: 0;
     left: 0;
@@ -9,11 +9,26 @@
     align-items: center;
     padding: 0 20px;
     box-sizing: border-box;
-    margin-top: 2px;
+}
+
+.btn {
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+}
+.btn:hover {
+    background-color: #791fadaf;
+}
+
+.input {
+    height: 20px;
+    width: 50%;
+    font-size: 15px;
 }
 
 .logo {
     font-family: 'Yaldevi', sans-serif;
     font-size: 70px;
+    color: tomato;
     margin: 2px 2px 2px 2px;
 }

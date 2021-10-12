@@ -5,6 +5,7 @@ import { filterByContinent,
         orderByActivity
      } from '../../redux/actions';
 
+import styles from './Filters.module.css';
 const Filters = () => {
     const dispatch = useDispatch();
 
@@ -23,7 +24,7 @@ const Filters = () => {
     };
 
     return (
-        <div>
+        <div className={styles.container}>
             <label>CONTINENT</label>
             <select onChange={handleOnContinent} name="" id="">
                 <option value="">-</option>

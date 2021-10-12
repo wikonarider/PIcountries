@@ -15,7 +15,6 @@ const index = () => {
                 <Route exact path='/main' component={Home} />
                 <Route exact path='/main/create_activity' component={CreateActivity} />
                 <Route exact path='/main/detail/:id' render={({match}) => < CountryDetail id={match.params.cod} />}></Route>
-                {/* <Route exact path='/main/detail/:id' component={CountryDetail} /> */}
             </Switch>
         </div>
     )

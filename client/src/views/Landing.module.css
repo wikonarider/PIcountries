@@ -1,5 +1,4 @@
 
-
 .ctn {
     background-image: url('./background.jpg');
     background-position: center;
@@ -8,31 +7,30 @@
     position: relative;
     align-items: center;
     justify-content: center; 
-    width: 1350px;
-    height: 600px;
+    width: 1366px;
+    height: 625px;
    
 
 }
-@keyframes button {
-    50% {
-        width: 400px;
-        height: 500px;
-    }
-    50% {
-        width: 400px;
-        height: 500px;
-    }
-}
+
 .btn {
     background-color: transparent;
     border: none;
     font-family: 'Yaldevi', sans-serif;
     font-size: 70px;
-    animation-duration: 3s;
-    animation-name: button;
-    animation-iteration-count: infinite;
+    color: whitesmoke;
 }
 
 .btn:hover{
     background-color: yellowgreen;
+    animation-duration: 3s;
+    animation-name: hover;
+    animation-iteration-count: 1;
+}
+
+@keyframes hover {
+    100% {
+        width: 400px;
+        height: 500px;
+    }
 }

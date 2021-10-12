@@ -14,8 +14,8 @@ const Nav = () => {
     return (
         <div className={styles.cnt}>
             <div className={styles.logo}>COUNTRY ACTIVITIES</div>
-            <button onClick={refreshPage}>Home</button>
-            <button onClick={() => history.push('/main/create_activity')}>Add Activity</button>
+            <button onClick={refreshPage} className={styles.btn}>HOME</button>
+            <button onClick={() => history.push('/main/create_activity')} className={styles.btn}>ADD ACTIVITY</button>
             <div>
             < SearchBar />
             </div>

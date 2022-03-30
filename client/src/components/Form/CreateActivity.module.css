@@ -1,46 +1,50 @@
-.cnt{
-    width: 100%;
-    max-width: 600px;
-    margin-left: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.cnt {
+  width: 100%;
+  max-width: 600px;
+  margin-left: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
-    width: 300px;
-    height: 300px;
-    padding: 6rem;
-    justify-content: center;
-    background-image: linear-gradient(180deg, white 60%, #791fadaf 95%);
-    display: flex;
-    margin-top: 5px;
-    margin-right: auto;
-    margin-left: auto;
-    flex-flow: row wrap;
-    align-items: center;
+  width: 300px;
+  height: 300px;
+  padding: 6rem;
+  justify-content: center;
+  background-image: linear-gradient(180deg, white 40%, #7bec3aaf 95%);
+  display: flex;
+  margin-top: 5px;
+  margin-right: auto;
+  margin-left: auto;
+  flex-flow: row wrap;
+  align-items: center;
 }
 
 .font {
-    margin-right: 40px;
-    margin-left: -40px;
-    font-family: 'Yaldevi', sans-serif;
-    font-size: 20px;
+  margin-right: auto;
+  font-family: "Yaldevi", sans-serif;
+  font-size: 18px;
 }
 
 .input {
-    width: 300px;
-    height: 100%;
+  width: 200px;
+  height: 100%;
+}
+
+.inputS {
+  width: 80px;
+  height: 100%;
 }
 .btn {
-    font-family: 'Yaldevi', sans-serif;
-    font-size: 30px;
-    color: tomato;
-    background-color: transparent;
-    border: none;
-    margin-bottom: -100px;
+  font-family: "Yaldevi", sans-serif;
+  font-size: 30px;
+  color: tomato;
+  background-color: transparent;
+  border: none;
+  margin-bottom: -100px;
 }
 .btn:hover {
-    background-color: yellowgreen;
+  background-color: yellowgreen;
 }

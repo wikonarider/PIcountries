@@ -26,7 +26,7 @@ const Filters = () => {
     return (
         <div className={styles.container}>
             <label>CONTINENT</label>
-            <select onChange={handleOnContinent} name="" id="">
+            <select className={styles.placeHolder} onChange={handleOnContinent} name="" id="">
                 <option value="">-</option>
                 <option value="Africa">Africa</option>
                 <option value="Americas">Americas</option>
@@ -35,19 +35,19 @@ const Filters = () => {
                 <option value="Oceania">Oceania</option>
             </select>
             <label>ABC</label>
-            <select value onChange={handleOnOrder} name="order" id="">
+            <select className={styles.placeHolder} value onChange={handleOnOrder} name="order" id="">
                 <option value="">-</option>
                 <option value="ASC">A-Z</option>
                 <option value="DES">Z-A</option>
             </select>
             <label>AREA</label>
-            <select value onChange={handleOnOrder} name="area" id="">
+            <select className={styles.placeHolder} value onChange={handleOnOrder} name="area" id="">
                 <option value="">-</option>
                 <option value="MAX">biggest</option>
                 <option value="MIN">smaller</option>
             </select>
             <label>ACTIVITY</label>
-            <select onChange={handleOnActivity} name="activity" id="">
+            <select className={styles.placeHolder} onChange={handleOnActivity} name="activity" id="">
             <option value="">-</option>
                 {
                    activities.map(a => (

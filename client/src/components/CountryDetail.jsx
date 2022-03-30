@@ -4,7 +4,7 @@ import styles from './CountryDetail.module.css'
 
 const CountryDetail = () => {
     const {country} = useSelector(state => state);
-    console.log("SHOW ACTIVITIES", country);
+    // console.log("SHOW ACTIVITIES", country);
 
     while(country === undefined) {
     

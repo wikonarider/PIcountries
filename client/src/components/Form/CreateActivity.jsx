@@ -35,16 +35,18 @@ const CreateActivity = () => {
 
     const handleOnSubmit = e => {
         e.preventDefault();
-        console.log("VALORES", values)
-        dispatch(createActivity(values));
-
-        setValues({
+        // console.log("VALORES", values)
+        if(!values.difficulty){
+          return alert('Difficulty is required')
+        }
+          dispatch(createActivity(values));
+          setValues({
             name: '',
             difficulty: '',
             duration: '',
             season: '',
             country: [],
-        });
+          });
         alert('Activity created!')
     };
 
@@ -57,7 +59,7 @@ const CreateActivity = () => {
             </div>
             <div className={styles.font}>
             <label htmlFor="">DIFFICULTY:</label>
-            <select name='difficulty' onChange={handleOnChange} value={values.difficulty} required>
+            <select className={styles.inputS} name='difficulty' onChange={handleOnChange} value={values.difficulty} required>
                 <option>-</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -68,11 +70,11 @@ const CreateActivity = () => {
             </div>
             <div className={styles.font}>
             <label>DURATION:</label>
-            <input type="time" name='duration' onChange={handleOnChange} values={values.name} placeholder="Activity duration 00:00" required/>
+            <input className={styles.inputS} type="time" name='duration' onChange={handleOnChange} values={values.name} placeholder="Activity duration 00:00" required/>
             </div>
             <div className={styles.font}>
             <label>SEASON:</label>
-            <select name='season' onChange={handleOnChange} value={values.season} required>
+            <select className={styles.inputS} name='season' onChange={handleOnChange} value={values.season} required>
                 <option>-</option>
                 <option value="summer">summer</option>
                 <option value="autumn">autumn</option>
@@ -82,7 +84,7 @@ const CreateActivity = () => {
             </div>
             <div className={styles.font}>
             <label>COUNTRY:</label>
-            <div>
+            <div className={styles.input}  >
             <select onChange={(e) => handleSelect(e)} value={input.inputCountries[input.inputCountries.length - 1]} className required>
               <option value="">Select Country:</option>
               {countries.map((e) => (<option key={e.id} value={e.name}> {e.name} </option>

@@ -80,3 +80,4 @@ export const getAllActivities = () => dispatch => {
 }
 
 export const unmountAllCountries = () => ({ type: UNMOUNT_ALL_COUNTRIES});
+

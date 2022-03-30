@@ -11,6 +11,7 @@ const Countries = () => {
     const query = new URLSearchParams(useLocation().search.slice(1));
     const { countries } = useSelector(state => state);
     const from = parseInt(query.get('from')) || 0;
+
     return (
         <div className={styles.cnt}>
             <h4 className={styles.pag}><Pagination /></h4>

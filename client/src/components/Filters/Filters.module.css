@@ -7,13 +7,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
-/* .containers{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: auto;
-    margin: 10px 10px 10px 10px;
-} */
+.placeHolder {
+    width: 100px;
+    height: 100%;
+}
 
 .cnt{
     background-color:greenyellow;

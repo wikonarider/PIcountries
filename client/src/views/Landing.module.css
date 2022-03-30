@@ -1,36 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Yaldevi", sans-serif;
+}
 
-.ctn {
-    background-image: url('./background.jpg');
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center; 
-    width: 1366px;
-    height: 625px;
-   
+.container {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+      rgba(236, 243, 239, 0.021),
+      rgba(196, 212, 127, 0.288)
+    ),
+    url("../media/landing.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 
+.banner {
+  width: 100%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .btn {
-    background-color: transparent;
-    border: none;
-    font-family: 'Yaldevi', sans-serif;
-    font-size: 70px;
-    color: whitesmoke;
+  background-color: transparent;
+  border: none;
+  font-size: 70px;
+  color: whitesmoke;
 }
 
-.btn:hover{
-    background-color: yellowgreen;
-    animation-duration: 3s;
-    animation-name: hover;
-    animation-iteration-count: 1;
+.btn:hover {
+  background-color: rgba(255, 255, 0, 0.267);
+  transform: scale(1.5);
+  animation-duration: 10s;
+  animation-name: hover;
+  animation-iteration-count: 1;
 }
 
 @keyframes hover {
-    100% {
-        width: 400px;
-        height: 500px;
-    }
+  0% {
+    width: 400px;
+    height: 500px;
+  }
+  100% {
+    width: 400px;
+    height: 500px;
+  }
 }
+
+/* .container {
+  background-image: url("../media/landing.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 1366px;
+  height: 625px;
+}
+
+
+*/

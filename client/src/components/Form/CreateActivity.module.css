@@ -1,7 +1,6 @@
 .cnt {
-  width: 100%;
-  max-width: 600px;
-  margin-left: 200px;
+  width: 30em;
+  height: 75%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,41 +8,47 @@
 }
 
 .card {
-  width: 300px;
-  height: 300px;
-  padding: 6rem;
-  justify-content: center;
-  background-image: linear-gradient(180deg, white 40%, #7bec3aaf 95%);
+  height: 30em;
+  width: 50%;
+  margin-top: 98px;
+ justify-content: center;
+  background-color: rgb(95, 95, 240);
   display: flex;
-  margin-top: 5px;
   margin-right: auto;
   margin-left: auto;
-  flex-flow: row wrap;
-  align-items: center;
+  flex-flow: column;
+  padding-left: 7%;
 }
 
 .font {
-  margin-right: auto;
-  font-family: "Yaldevi", sans-serif;
-  font-size: 18px;
+  font-family: sans-serif;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  font-size: .8em;
+  color: #FFF;
 }
+
 
 .input {
-  width: 200px;
-  height: 100%;
+  display: inline-block;
+  border: none;
+  text-align: left;
+  box-shadow: 3px 2px rgba(255, 255, 255, 0.37);
+  padding: 10px;
+  width: 350px;
+  margin: 10px 0;
+  background: transparent;
+  color: #202020;
 }
-
-.inputS {
-  width: 80px;
-  height: 100%;
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #202020;
+  opacity: 1; /* Firefox */
 }
 .btn {
-  font-family: "Yaldevi", sans-serif;
-  font-size: 30px;
+  font-size: 1.5em;
   color: tomato;
   background-color: transparent;
   border: none;
-  margin-bottom: -100px;
 }
 .btn:hover {
   background-color: yellowgreen;

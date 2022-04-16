@@ -51,15 +51,15 @@ const CreateActivity = () => {
     };
 
     return (
-        <form className={styles.ctn} onSubmit={handleOnSubmit}>
-          <div className={styles.card}>
-            <div className={styles.font}>
+      <form className={styles.ctn} onSubmit={handleOnSubmit}>
+        <div className={styles.card}>
+          <div className={styles.font}>
             <label>ACTIVITY:</label>
             <input className={styles.input} name='name' onChange={handleOnChange} type='text' value={values.name} placeholder='write here your turist activity!' required/>
             </div>
             <div className={styles.font}>
             <label htmlFor="">DIFFICULTY:</label>
-            <select className={styles.inputS} name='difficulty' onChange={handleOnChange} value={values.difficulty} required>
+            <select className={styles.input} name='difficulty' onChange={handleOnChange} value={values.difficulty} required>
                 <option>-</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -69,39 +69,39 @@ const CreateActivity = () => {
             </select>
             </div>
             <div className={styles.font}>
-            <label>DURATION:</label>
-            <input className={styles.inputS} type="time" name='duration' onChange={handleOnChange} values={values.name} placeholder="Activity duration 00:00" required/>
+              <label>DURATION:</label>
+              <input className={styles.input} type="time" name='duration' onChange={handleOnChange} values={values.name} placeholder="Activity duration 00:00" required/>
             </div>
             <div className={styles.font}>
-            <label>SEASON:</label>
-            <select className={styles.inputS} name='season' onChange={handleOnChange} value={values.season} required>
-                <option>-</option>
-                <option value="summer">summer</option>
-                <option value="autumn">autumn</option>
-                <option value="winter">winter</option>
-                <option value="spring">spring</option>
-            </select>
+              <label>SEASON:</label>
+              <select className={styles.input} name='season' onChange={handleOnChange} value={values.season} required>
+                 <option>-</option>
+                 <option value="summer">summer</option>
+                 <option value="autumn">autumn</option>
+                 <option value="winter">winter</option>
+                 <option value="spring">spring</option>
+              </select>
             </div>
             <div className={styles.font}>
             <label>COUNTRY:</label>
-            <div className={styles.input}  >
-            <select onChange={(e) => handleSelect(e)} value={input.inputCountries[input.inputCountries.length - 1]} className required>
-              <option value="">Select Country:</option>
-              {countries.map((e) => (<option key={e.id} value={e.name}> {e.name} </option>
-              ))}
-            </select>
-            <div>
-              {[
-                values.country.map(
-                  (i) => countries.find((ob) => ob.name === i)?.name + ", "
-                ),
-              ]}
-            </div>
-            </div>
-          </div>
+              <div className={styles.input}  >
+                  <select onChange={(e) => handleSelect(e)} value={input.inputCountries[input.inputCountries.length - 1]} className required>
+                    <option value="">Select Country:</option>
+                   {countries.map((e) => (<option key={e.id} value={e.name}> {e.name} </option>
+                   ))}
+                </select>
+              </div>
+              <div>
+                    {[
+                    values.country.map(
+                     (i) => countries.find((ob) => ob.name === i)?.name + ", "
+                     ),
+                    ]}
+              </div>
             <button className={styles.btn}>ADD YOUR ACTIVITY</button>
           </div>
-        </form>      
+        </div>
+      </form>      
     );
 };
 

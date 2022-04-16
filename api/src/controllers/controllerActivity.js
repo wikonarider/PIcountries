@@ -28,7 +28,7 @@ module.exports = {
         //         name: country,
         //     }
         // });
-        console.log("PAÍSS", country)
+        // console.log("PAÍSS", country)
         res.status(200).json(createdActivity);
         }catch(err){
             next(err);

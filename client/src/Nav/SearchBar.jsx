@@ -3,7 +3,8 @@ import { useDispatch } from 'react-redux';
 import { useHistory  } from 'react-router';
 import { getAllCountries } from '../redux/actions';
 
-import styles from './Nav.module.css';
+import { BiSearch } from 'react-icons/bi';
+import styles from './SearchBar.module.css';
 
 const SearchBar = () => {
     const history = useHistory();
@@ -20,9 +21,9 @@ const SearchBar = () => {
         dispatch(getAllCountries(name));
     };
     return(
-        <div>
-            <button onClick={handleOnClick} className={styles.btn}>SEARCH</button>
-            <input onChange={(e) => handleChange(e)} value={name} type='text' placeholder='country name...' className={styles.input}></input> 
+        <div className={styles.container}>
+            <input type='text' className={styles.input} onChange={(e) => handleChange(e)} value={name} placeholder='country name...'></input> 
+            <button  className={styles.searchButton} onClick={handleOnClick}> <BiSearch/> </button>
         </div>
     );
 };

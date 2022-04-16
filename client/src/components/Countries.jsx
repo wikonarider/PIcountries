@@ -14,7 +14,6 @@ const Countries = () => {
 
     return (
         <div className={styles.cnt}>
-            <h4 className={styles.pag}><Pagination /></h4>
             <div className={styles.one}>
             { countries.length > 0 ?
                 countries &&

@@ -13,19 +13,21 @@ const Nav = () => {
 
   return (
     <div className={styles.cnt}>
-      <div className={styles.title}>COUNTRY ACTIVITIES</div>
+      <div className={styles.title}>
+        <h1> COUNTRIES <br/> </h1> <h3 className={styles.titlespan}> AND THEIR ACTIVITIES </h3>
+        </div>
+        <div className={styles.section}>
       <button onClick={refreshPage} className={styles.btn}>
         HOME
       </button>
       <button
         onClick={() => history.push("/main/create_activity")}
         className={styles.btn}
-      >
+        >
         ADD ACTIVITY
       </button>
-      <div>
+        </div>
         <SearchBar />
-      </div>
     </div>
   );
 };

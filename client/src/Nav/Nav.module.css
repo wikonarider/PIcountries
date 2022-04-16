@@ -1,22 +1,56 @@
-.cnt {
-  height: 120px;
-  width: 100%;
+  .cnt {
   top: 0;
+  width: 100%;
   left: 0;
+  height: 15vh;
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   padding: 0 20px;
-  box-sizing: border-box;
-  background-color: transparent;
+  background: linear-gradient(
+      rgba(124, 134, 129, 0),
+      rgba(124, 134, 80, 0.562)
+    ),
+    url("../media/landing1.jpg") no-repeat;
+    font-family: 'Poppins', sans-serif;
+    opacity: 0.8;
+    position: fixed;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.section {
+display: flex;
+align-items: center;
+}
+
+.title {
+  display:flex;
+  flex-direction: column;
+  margin: 5px 5px 5px 15px;
+  color:white;
+  padding: 0 20px;
+}
+
+.title h1 {
+  font-size: 33px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.title .titlespan{
+font-size: 17px;
+font-family: 'Poppins', sans-serif;
 }
 
 .btn {
   font-size: 20px;
   background-color: transparent;
   border: none;
+  color:white;
+  font-family: 'Poppins', sans-serif;
+  padding:13px;
 }
 .btn:hover {
-  background-color: rgb(165, 240, 16);
+  color: rgb(0, 255, 13);
 }
 
 .input {
@@ -24,15 +58,6 @@
   width: 50%;
   font-size: 15px;
 }
-/* .logo {
-   background-image: url("./logo.jpg");
-  display: flex;
-  padding: 2px 2px 2px 2px;
-} */
-.title {
-  margin-left: 5px;
-  font-size: 40px;
-  color: tomato;
-  margin: 2px 2px 2px 2px;
-  display: flex;
-}
+
+
+

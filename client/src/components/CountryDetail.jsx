@@ -22,7 +22,7 @@ const CountryDetail = () => {
     }
         
         const DetailComponent = () => (
-
+        
                 <div className={styles.wrapper}>
                 <div className={styles.card}>
                 <img src={country.flag} alt={country.name} className={styles.img} />
@@ -36,8 +36,9 @@ const CountryDetail = () => {
                 {country.activities[0] !== undefined ? <ActivityComponent/> : <p className={styles.p}>Activities: No activities yet </p>}
                     </div>
                 </div>
-            </div>
-        </div>
+                </div>
+                </div>
+    
     );
     return country === undefined ? <div>Loading...</div> : DetailComponent();
 };

@@ -15,7 +15,7 @@ const router = Router();
 // Ejemplo: router.use('/auth', authRouter);
 // GET /countries
 router.get('/countries', getCountries);
-router.get('/countries/:id', getCountries);
+router.get('/countries/:cod', getCountries);
 router.get('/countries/?name=', getCountries);
 router.post('/activities/add', createActivity);
 // EXTRAS -----------------------------------------

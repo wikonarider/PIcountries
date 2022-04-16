@@ -9,12 +9,22 @@ const Landing = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.banner}>
-        <button className={styles.btn} onClick={handleOnClick}>
-          COUNTRY ACTIVITIES
+      <div className={styles.title}>
+        <h1>COUNTRIES AND THEIR ACTIVITIES </h1>
+        </div>
+          <div className={styles.text}>
+        <p> Web development of a SPA using React for Front End, Redux as state
+            management and styles with pure CSS. <br/> 
+            In Back End Express
+            and relational database. <br/>
+            Some features: search for countries, filtering according their
+            properties, country cards of details, add tourist activities for
+            the country.</p>
+          </div>
+        <button className={styles.button} onClick={handleOnClick}>
+          Ingresar ahora
         </button>
       </div>
-    </div>
   );
 };
 

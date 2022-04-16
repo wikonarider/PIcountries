@@ -4,7 +4,7 @@ const axios = require('axios')
 module.exports = {
     getCountries: async function(req, res, next){
         const { name } = req.query;
-        const { id } = req.params;
+        const { cod } = req.params;
         try {
             let resApi = await axios.get(`https://restcountries.com/v3/all`);
             let countries = resApi.data.map(country => {
@@ -45,8 +45,8 @@ module.exports = {
             });
             // console.log("¿CUÁNTOS PAÍSES TENGO?", allCountries.length);
         // [ ] GET /countries/{idPais}:
-        if(id) {
-            allCountries = allCountries.find(ccod => ccod.cod.toLowerCase() === id.toLowerCase());
+        if(cod) {
+            allCountries = allCountries.find(ccod => ccod.cod.toLowerCase() === cod.toLowerCase());
         };
         // [ ] GET /countries?name=
         if(name) {

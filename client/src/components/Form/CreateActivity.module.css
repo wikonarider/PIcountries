@@ -1,6 +1,4 @@
 .cnt {
-  width: 30em;
-  height: 75%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,16 +6,14 @@
 }
 
 .card {
-  height: 30em;
-  width: 50%;
-  margin-top: 98px;
- justify-content: center;
-  background-color: rgb(95, 95, 240);
-  display: flex;
-  margin-right: auto;
-  margin-left: auto;
-  flex-flow: column;
-  padding-left: 7%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 2em;
+    background: #6b705c;
+    padding: 3em;
+    margin-top: 3em;
 }
 
 .font {
@@ -31,25 +27,46 @@
 
 .input {
   display: inline-block;
-  border: none;
+  border:transparent;
+  border-radius: 2em;
   text-align: left;
-  box-shadow: 3px 2px rgba(255, 255, 255, 0.37);
-  padding: 10px;
-  width: 350px;
-  margin: 10px 0;
+  box-shadow: 0.5px 2px rgba(255, 255, 255, 0.37);
+  padding: 5px;
+  width: 100%;
+  margin: 13px 0;
   background: transparent;
   color: #202020;
 }
+
+.inputSelectCountry {
+  display: inline-block;
+  border: none;
+  text-align: left;
+  /* box-shadow: 3px 2px rgba(255, 255, 255, 0.37); */
+  width: 28.5em;
+  margin-left: 5px;
+  background: transparent;
+  color: #202020;
+}
+
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #202020;
   opacity: 1; /* Firefox */
 }
+
 .btn {
+  height: 2em;
+  width: 100%;
   font-size: 1.5em;
-  color: tomato;
+  color: rgb(0, 255, 13);
+  border-radius: 2em;
+  border:none;
+  box-shadow: 3px 2px rgba(255, 255, 255, 0.37);
   background-color: transparent;
-  border: none;
+  margin-top: 2em;
 }
 .btn:hover {
-  background-color: yellowgreen;
-}
+  color: #6b705c;
+  border-radius: 2em;
+  background-color: #deccbf;
+  }

@@ -1,8 +1,7 @@
 .container {
-  max-width: 1400px;
-  margin-top: 94px;
+  max-width: 100%;
+  margin-top: 95px;
   padding: 0;
-  background: rgb(34,193,195);
-background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(54,48,143,1) 100%);
-text-align: center; 
+  text-align: center; 
+margin-bottom: 0;
 }

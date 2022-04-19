@@ -22,7 +22,7 @@ const SearchBar = () => {
     };
     return(
         <div className={styles.container}>
-            <input type='text' className={styles.input} onChange={(e) => handleChange(e)} value={name} placeholder='country name...'></input> 
+            <input className={styles.input}  type='text' onChange={(e) => handleChange(e)} value={name} placeholder='Country name...'></input> 
             <button  className={styles.searchButton} onClick={handleOnClick}> <BiSearch/> </button>
         </div>
     );

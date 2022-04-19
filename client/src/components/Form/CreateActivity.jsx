@@ -55,7 +55,7 @@ const CreateActivity = () => {
         <div className={styles.card}>
           <div className={styles.font}>
             <label>ACTIVITY:</label>
-            <input className={styles.input} name='name' onChange={handleOnChange} type='text' value={values.name} placeholder='write here your turist activity!' required/>
+            <input className={styles.input} name='name' onChange={handleOnChange} type='text' value={values.name} placeholder='Write here your turist activity!' required/>
             </div>
             <div className={styles.font}>
             <label htmlFor="">DIFFICULTY:</label>
@@ -85,8 +85,8 @@ const CreateActivity = () => {
             <div className={styles.font}>
             <label>COUNTRY:</label>
               <div className={styles.input}  >
-                  <select onChange={(e) => handleSelect(e)} value={input.inputCountries[input.inputCountries.length - 1]} className required>
-                    <option value="">Select Country:</option>
+                  <select className={styles.inputSelectCountry} onChange={(e) => handleSelect(e)} value={input.inputCountries[input.inputCountries.length - 1]} required>
+                    <option  value="">Select Country</option>
                    {countries.map((e) => (<option key={e.id} value={e.name}> {e.name} </option>
                    ))}
                 </select>

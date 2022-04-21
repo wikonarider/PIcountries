@@ -46,7 +46,7 @@ font-family: 'monospace', sans-serif;
   padding:13px;
 }
 .btn:hover {
-color: rgb(0, 255, 13);
+color: white;
 border-radius: 2em;
 background-color: #deccbf;
 }

@@ -4,10 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import axios from 'axios';
-
+// this is for deploy the FrontEnd
+import dotenv from "dotenv";
 import store from './redux/store';
 import { Provider } from 'react-redux';
-axios.defaults.baseURL = 'http://localhost:3001/';
+
+dotenv.config();
+
+axios.defaults.baseURL = process.env.REACT_APP_API || 'http://localhost:3001';
 
 ReactDOM.render(
   <React.StrictMode>

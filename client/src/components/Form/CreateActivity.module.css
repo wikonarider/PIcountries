@@ -35,7 +35,7 @@
   width: 100%;
   margin: 13px 0;
   background: transparent;
-  color: #202020;
+  color: gainsboro;
 }
 
 .inputSelectCountry {
@@ -46,11 +46,11 @@
   width: 28.5em;
   margin-left: 5px;
   background: transparent;
-  color: #202020;
+  color: gainsboro;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: rgba(255, 255, 255, 0.452);
+  color: gainsboro;
   opacity: 1; /* Firefox */
 }
 

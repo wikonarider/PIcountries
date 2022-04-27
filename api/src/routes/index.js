@@ -10,7 +10,7 @@ const {
 
 
 const router = Router();
-
+//coment prueba
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
 // GET /countries
